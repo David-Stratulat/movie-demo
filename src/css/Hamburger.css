@@ -1,0 +1,104 @@
+:root {
+  --bar-width: 35px;
+  --bar-height: 4px;
+  --hamburger-gap: 6px;
+  --foreground: #222;
+  --animation-timing: 250ms ease-in-out;
+
+  --hamburger-height: calc(
+    var(--bar-height) * 3 + var(--hamburger-gap) * 2
+  );
+}
+
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.414);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 999px;
+  transition: all var(--animation-timing);
+  transform-origin: center;
+}
+
+.hamburger-menu input {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  transform: rotate(45deg) translate(8px, 6px);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  transform: rotate(-45deg) translate(8px, -6px);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  max-width: 80vw;
+  height: 100vh;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+
+  padding: 90px 20px;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  z-index: 999;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  transform: translateX(0);
+}
+
+.hamburger-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.hamburger-link {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  padding: 12px 15px;
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+}
+
+.hamburger-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
