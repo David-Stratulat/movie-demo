@@ -1,16 +1,118 @@
-# React + Vite
+# 🎬 Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive movie application built with React that allows users to browse movies and manage their favorite list.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project includes:
 
-## React Compiler
+- Responsive desktop navigation
+- Mobile hamburger menu
+- Favorite movies system
+- Clean and modern UI
+- React Router navigation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Home Page
+- Browse available movies
+- Clean movie cards layout
+- Easy navigation
+- API integration
+
+### Favorites Page
+- Save movies to favorites
+- Remove movies from favorites
+
+### Responsive Navigation
+- Desktop navbar
+- Mobile hamburger menu
+- Sidebar navigation for smaller devices
+
+---
+
+## Tech Stack
+
+- React
+- React Router DOM
+- JavaScript
+- CSS3
+- Vite
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/David-Stratulat/movie-demo
+```
+
+Go to project directory:
+
+```bash
+cd movie-app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## Folder Structure
+
+```bash
+movie-app/
+│
+├── src/
+│   ├── components/
+│   │   ├── NavBar.jsx
+│   │   ├── Hamburger.jsx
+│   │   ├── MovieCard.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Favorites.jsx
+│   │
+│   ├── css/
+│   │   ├── NavBar.css
+│   │   ├── HamburgerMenu.css
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+└── package.json
+```
+
+---
+
+## Future Improvements
+
+- Persistent favorites functionality
+- Authentication system
+- Dark/light theme toggle
+- User profiles
+
+---
+
+## Why I Built This Project
+
+I built this project to improve my React skills by practicing:
+
+- Component structure
+- State management
+- Responsive design
+- Routing
+- UI development
